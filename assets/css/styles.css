@@ -7,6 +7,8 @@
   --color-tv-glass-off: #333831;
   --color-tv-glass-border: #525f67;
   --color-intro-sony-font: #00328b;
+  --color-intro-sony-diamond-gradient: linear-gradient(45deg, #D53D0A 0%, #D6B904 50%, #D53D0A 100%);
+  --color-intro-sony-triangle-gradient: linear-gradient(45deg, #D53D0A 0%, #D6B904 50%, rgba(213, 61, 10, 0) 50.1%);
 }
 
 html {
@@ -275,11 +277,12 @@ main {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--color-white-pure);
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 0;
 }
 
 .sony-screen__title {
@@ -289,22 +292,25 @@ main {
   text-transform: uppercase;
   text-align: center;
   color: var(--color-intro-sony-font);
+  opacity: 0;
 }
 
 .sony-screen__diamond {
   width: 12rem;
   height: 12rem;
-  background: linear-gradient(45deg, #D53D0A 0%, #D6B904 50%, #D53D0A 100%);
+  background: var(--color-intro-sony-diamond-gradient);
   transform: rotate(45deg);
   position: relative;
   margin-top: 4rem;
   margin-bottom: 5rem;
+  opacity: 0;
 }
 
 .sony-screen__triangle {
   width: 12rem;
   height: 12rem;
-  background: linear-gradient(45deg, #D53D0A 0%, #D6B904 50%, rgba(213, 61, 10, 0) 50.1%);
+  background: var(--color-intro-sony-triangle-gradient);
+  opacity: 0;
 }
 
 .triangle-left {
@@ -315,30 +321,10 @@ main {
   position: absolute;
   transform: rotate(180deg);
 }
-
-
-/* .sony-screen__triangle {
-  width: 5rem;
-  height: 5rem;
-  background: linear-gradient(45deg, #D53D0A 0%, #D6B904 50%, rgba(213, 61, 10, 0) 50.1%);
-}
-
-.triangle-left {
-  position: absolute;
-  top: 0.8rem;
-  left: 0.8rem;
-}
-
-.triangle-right {
-  position: absolute;
-  bottom: 0.8rem;
-  right: 0.8rem;
-  transform: rotate(180deg);
-} */
-
 
 .sony-screen__text-container {
   position: relative;
+  opacity: 0;
 }
 
 .sony-screen__text-1 {
@@ -397,4 +383,10 @@ footer a {
   font-family: "VT323", monospace;
   color: var(--color-white-pure);
   text-decoration: none;
+}
+
+.test-button {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
