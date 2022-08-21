@@ -14,6 +14,12 @@ const sonyRightTriangle = document.querySelector('.triangle-right');
 const sonyTitle = document.querySelector('.sony-screen__title');
 const sonyText = document.querySelector('.sony-screen__text-container');
 
+const psScreen = document.querySelector('.intro__ps-screen');
+const psScreenLogoImage = document.querySelector('.ps-screen__ps-logo-image');
+const psScreenLogoText = document.querySelector('.ps-screen__ps-logo-text');
+const psScreenText = document.querySelector('.ps-screen__text-container');
+const psScreenTextSCEA = document.querySelector('.ps-screen__scea-text');
+
 // main timeline
 const mainTl = gsap.timeline({
   onUpdate: () =>
@@ -48,4 +54,28 @@ testButton.addEventListener('click', () => {
     autoAlpha: 1,
     duration: 0.5
   });
+  mainTl.to([sonyDiamond, sonyLeftTriangle, sonyRightTriangle, sonyTitle, sonyText], {
+    autoAlpha: 0,
+    duration: 0.1,
+    delay: 3
+  });
+  mainTl.to([sonyScreen, tvScreenTop, tvScreenLeft, tvScreenBottom, tvScreenRight, tvScreenCenter], {
+    backgroundColor: '#000',
+    duration: 0.1
+  })
+  mainTl.to(psScreen, { 
+    autoAlpha: 1, backgroundColor: '#000', duration: 0.5 
+  }, '<');
+  mainTl.to(psScreenLogoImage, {
+    autoAlpha: 1,
+    duration: 0.2
+  });
+  mainTl.to([psScreenText, psScreenTextSCEA], {
+    autoAlpha: 1,
+    duration: 0.1
+  });
+  mainTl.to(psScreenLogoText, {
+    autoAlpha: 1,
+    duration: 0.2
+  })
 });

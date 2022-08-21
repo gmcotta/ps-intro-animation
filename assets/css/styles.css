@@ -9,6 +9,7 @@
   --color-intro-sony-font: #00328b;
   --color-intro-sony-diamond-gradient: linear-gradient(45deg, #D53D0A 0%, #D6B904 50%, #D53D0A 100%);
   --color-intro-sony-triangle-gradient: linear-gradient(45deg, #D53D0A 0%, #D6B904 50%, rgba(213, 61, 10, 0) 50.1%);
+  --color-intro-ps-text: #bfbfbf;
 }
 
 html {
@@ -357,6 +358,56 @@ main {
   text-transform: uppercase;
   text-align: center;
   color: var(--color-intro-sony-font);
+}
+
+.intro__ps-screen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.ps-screen__ps-logo-image {
+  width: 20rem;
+  margin-bottom: 0.8rem;
+  opacity: 0;
+}
+
+.ps-screen__ps-logo-text {
+  width: 20rem;
+  margin-bottom: 0.8rem;
+  opacity: 0;
+}
+
+.ps-screen__text-container {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-intro-ps-text);
+  text-align: center;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+  opacity: 0;
+}
+
+.ps-screen__scea-text {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-intro-ps-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0;
+}
+
+.ps-screen__scea-text > span {
+  font-size: 1rem;
 }
 
 .right-side {
