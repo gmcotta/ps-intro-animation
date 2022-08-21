@@ -1,11 +1,15 @@
 :root {
   --color-white-pure: #fff;
   --color-black-pure: #000;
-  --color-tv-primary: #747F85;
+  --color-tv-primary: #747f85;
   --color-tv-secondary: #687176;
-  --color-tv-speakers: #525F67;
+  --color-tv-speakers: #525f67;
   --color-tv-glass-off: #333831;
-  --color-tv-glass-border: #525F67;
+  --color-tv-glass-border: #525f67;
+  --color-intro-sony-font: #00328b;
+  --color-intro-sony-diamond-gradient: linear-gradient(45deg, #D53D0A 0%, #D6B904 50%, #D53D0A 100%);
+  --color-intro-sony-triangle-gradient: linear-gradient(45deg, #D53D0A 0%, #D6B904 50%, rgba(213, 61, 10, 0) 50.1%);
+  --color-intro-ps-text: #bfbfbf;
 }
 
 html {
@@ -261,6 +265,150 @@ main {
   margin-right: 1rem;
 }
 
+.tv-screen__container {
+  height: 100%;
+  aspect-ratio: 1;
+  margin: 0 auto;
+  position: relative;
+}
+
+.intro__sony-screen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.sony-screen__title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 4.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-intro-sony-font);
+  opacity: 0;
+}
+
+.sony-screen__diamond {
+  width: 12rem;
+  height: 12rem;
+  background: var(--color-intro-sony-diamond-gradient);
+  transform: rotate(45deg);
+  position: relative;
+  margin-top: 4rem;
+  margin-bottom: 5rem;
+  opacity: 0;
+}
+
+.sony-screen__triangle {
+  width: 12rem;
+  height: 12rem;
+  background: var(--color-intro-sony-triangle-gradient);
+  opacity: 0;
+}
+
+.triangle-left {
+  position: absolute;
+}
+
+.triangle-right {
+  position: absolute;
+  transform: rotate(180deg);
+}
+
+.sony-screen__text-container {
+  position: relative;
+  opacity: 0;
+}
+
+.sony-screen__text-1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-intro-sony-font);
+  line-height: 1.8rem;
+}
+
+.sony-screen__text-2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-intro-sony-font);
+}
+
+.sony-screen__text-3 {
+  position: absolute;
+  bottom: 0.2rem;
+  right: 0;
+  transform: translateX(120%);
+  font-family: 'Arial', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-intro-sony-font);
+}
+
+.intro__ps-screen {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.ps-screen__ps-logo-image {
+  width: 20rem;
+  margin-bottom: 0.8rem;
+  opacity: 0;
+}
+
+.ps-screen__ps-logo-text {
+  width: 20rem;
+  margin-bottom: 0.8rem;
+  opacity: 0;
+}
+
+.ps-screen__text-container {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-intro-ps-text);
+  text-align: center;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.05em;
+  opacity: 0;
+}
+
+.ps-screen__scea-text {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-intro-ps-text);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  opacity: 0;
+}
+
+.ps-screen__scea-text > span {
+  font-size: 1rem;
+}
+
 .right-side {
   width: 40rem;
   height: 45rem;
@@ -285,4 +433,10 @@ footer a {
   font-family: "VT323", monospace;
   color: var(--color-white-pure);
   text-decoration: none;
+}
+
+.test-button {
+  position: absolute;
+  top: 0;
+  left: 0;
 }

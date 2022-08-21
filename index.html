@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Playstation intro animation</title>
   <link rel="stylesheet" href="./assets/css/styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
 </head>
 <body>
   <header class="header">
@@ -26,7 +28,40 @@
               <div class="tv-glass corner-2"></div>
               <div class="tv-glass corner-3"></div>
               <div class="tv-glass corner-4"></div>
-              <div class="tv-glass corner-5"></div>
+              <div class="tv-glass corner-5">
+                <section class="tv-screen__container">
+                  <div class="intro__sony-screen">
+                    <p class="sony-screen__title">Sony</p>
+                    <div class="sony-screen__diamond">
+                      <div class="sony-screen__triangle triangle-left"></div>
+                      <div class="sony-screen__triangle triangle-right"></div>
+                    </div>
+                    <div class="sony-screen__text-container">
+                      <p class="sony-screen__text-1">Computer</p>
+                      <p class="sony-screen__text-2">Enterntainment</p>
+                      <p class="sony-screen__text-3">TM</p>
+                    </div>
+                  </div>
+                  <div class="intro__ps-screen">
+                    <img 
+                      class="ps-screen__ps-logo-image" 
+                      src="./assets/images/ps-logo-image.png" 
+                      alt="PlayStation Logo Image" 
+                    />
+                    <img 
+                      class="ps-screen__ps-logo-text" 
+                      src="./assets/images/ps-logo-text.png" 
+                      alt="PlayStation Logo Text" 
+                    />
+                    <div class="ps-screen__text-container">
+                      <p>Licensed by</p>
+                      <p>Sony Computer Enterntainment America</p>
+                    </div>
+                    <p class="ps-screen__scea-text">SCEA <span>TM</span></p>
+                  </div>
+                  <div class="intro__playstation-screen"></div>
+                </section>
+              </div>
               <div class="tv-glass corner-6"></div>
               <div class="tv-glass corner-7"></div>
               <div class="tv-glass corner-8"></div>
@@ -62,6 +97,7 @@
     </section>
   </main>
   <section class="overlay"></section>
+  <button class="test-button">Start animation</button>
   <footer>
     <div>
       <a href="https://github.com/gmcotta" target="_blank" rel="noopener noreferrer">
@@ -75,6 +111,15 @@
       </a>
     </div>
   </footer>
+
+  <aside style="display: none">
+    <figure>
+      <figcaption>Playstation Intro audio</figcaption>
+      <audio id="playstation-intro-audio" src="./assets/audios/ps-intro.mp3">
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+    </figure>
+  </aside>
   <script src="./assets/scripts/script.js"></script>
 </body>
 </html>
