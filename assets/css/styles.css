@@ -10,6 +10,9 @@
   --color-intro-sony-diamond-gradient: linear-gradient(45deg, #D53D0A 0%, #D6B904 50%, #D53D0A 100%);
   --color-intro-sony-triangle-gradient: linear-gradient(45deg, #D53D0A 0%, #D6B904 50%, rgba(213, 61, 10, 0) 50.1%);
   --color-intro-ps-text: #bfbfbf;
+  --color-ps-primary: #c3c0c1;
+  --color-ps-secondary: #9b9a9d;
+  --color-ps-dark: #404042;
 }
 
 html {
@@ -416,6 +419,184 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+.playstation {
+  width: 100%;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.playstation__lid {
+  width: 68%;
+  height: 1rem;
+  background-color: var(--color-ps-primary);
+  border-bottom: 0.1rem solid var(--color-ps-secondary);
+}
+
+.playstation__body {
+  width: 100%;
+  height: 7rem;
+  background-color: var(--color-ps-primary);
+  border-radius: 0 0 0.4rem 0.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.playstation-body__controller-area {
+  width: 45%;
+  height: 100%;
+  background-color: var(--color-ps-primary);
+  display: flex;
+  justify-content: space-between;
+  /* padding-top: 1rem; */
+}
+
+.playstation-controller-area__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--color-ps-primary);
+  position: relative;
+  z-index: 5;
+  font-family: sans-serif;
+}
+
+.playstation-controller-area__number {
+  font-size: 1.6rem;
+  color: var(--color-ps-dark);
+}
+
+.playstation-controller-area_connectors {
+  border: 0.2rem solid var(--color-ps-secondary);
+  border-radius: 0.8rem;
+  padding: 0.4rem;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-ps-primary);
+  row-gap: 0.4rem;
+}
+
+.playstation-connectors__memory-card {
+  text-transform: uppercase;
+  font-size: 0.4rem;
+  padding: 0 1rem;
+  text-align: center;
+  width: 100%;
+  background-color: var(--color-ps-primary);
+  border: 0.1rem solid var(--color-ps-secondary);
+  color: var(--color-ps-dark);
+}
+
+.playstation-connectors__controller {
+  width: 100%;
+  background-color: var(--color-ps-dark);
+  border: 0.1rem solid var(--color-ps-dark);
+  border-radius: 0 0 0.6rem 0.6rem;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.3rem;
+  margin: 0 auto;
+}
+
+.playstation-connectors__controller-left-side,
+.playstation-connectors__controller-center,
+.playstation-connectors__controller-right-side {
+  background-color: var(--color-ps-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.2rem;
+  column-gap: 0.2rem;
+}
+
+.playstation-connectors__controller-hole {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: var(--color-ps-dark);
+}
+
+.playstation__left-side {
+  height: 7.5rem;
+  width: 25%;
+  background-color: var(--color-ps-primary);
+  box-shadow: -0.6rem 0 inset var(--color-ps-secondary);
+  clip-path: polygon(2% 0%, 98% 0%, 100% 100%, 10% 100%, 0% 90%);
+  position: absolute;
+  bottom: 1rem;
+  left: -1rem;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.playstation__power-indicator {
+  width: 0.4rem;
+  height: 0.4rem;
+  background-color: var(--color-ps-dark);
+
+}
+
+.playstation__left-ventilation {
+  width: 1rem;
+  height: 50%;
+  background-color: var(--color-ps-secondary);
+  position: absolute;
+  bottom: 50%;
+  transform: translateY(50%) rotate(2deg);
+  left: -1.5rem;
+  border-radius: 0.4rem 0 0 0.4rem;
+  z-index: 2;
+}
+
+.playstation__right-side {
+  height: 7.5rem;
+  width: 25%;
+  background-color: var(--color-ps-primary);
+  box-shadow: 0.8rem 0 inset var(--color-ps-secondary);
+  clip-path: polygon(8% 0%, 98% 0%, 100% 90%, 90% 100%, 0% 100%);
+  position: absolute;
+  bottom: 1rem;
+  right: -1rem;
+  z-index: 3;
+}
+
+.playstation__right-ventilation {
+  width: 1rem;
+  height: 50%;
+  background-color: var(--color-ps-secondary);
+  position: absolute;
+  bottom: 50%;
+  right: -1.5rem;
+  transform: translateY(50%) rotate(-2deg);
+  border-radius: 0 0.4rem 0.4rem 0;
+  z-index: 2;
+}
+
+.playstation__bottom-line {
+  width: 105%;
+  height: 0.1rem;
+  position: absolute;
+  bottom: 2rem;
+  background-color: var(--color-ps-secondary);
+  z-index: 4;
+}
+
+.playstation__bottom {
+  width: 95%;
+  height: 1rem;
+  background-color: var(--color-ps-secondary);
+  clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 5% 100%);
 }
 
 footer {
