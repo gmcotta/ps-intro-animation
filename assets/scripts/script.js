@@ -7,6 +7,10 @@ const tvScreenCenter = document.querySelector(".corner-5");
 const tvScreenRight = document.querySelector(".corner-6");
 const tvScreenBottom = document.querySelector(".corner-8");
 
+const psLidOpen = document.querySelector(".playstation-lid");
+const psLidClose = document.querySelector(".playstation__lid");
+const psPowerIndicator = document.querySelector(".playstation__power-indicator");
+
 const sonyScreen = document.querySelector('.intro__sony-screen');
 const sonyDiamond = document.querySelector('.sony-screen__diamond');
 const sonyLeftTriangle = document.querySelector('.triangle-left');
@@ -28,10 +32,24 @@ const mainTl = gsap.timeline({
     gsap.set(progressBar, { width: `${mainTl.progress() * 100}%` }),
 });
 
-testButton.addEventListener('click', () => {
+psLidOpen.addEventListener('click', () => {
+  mainTl.to(psLidOpen, {
+    rotateX: '89deg',
+    y: '1rem',
+    duration: 1
+  });
+  mainTl.set(psLidClose, {
+    autoAlpha: 1
+  }, '>-=0.2');
+  mainTl.set(psPowerIndicator, {
+    backgroundColor: '#358650',
+    duration: 0.2
+  })
+
+
   mainTl.to([tvScreenTop, tvScreenLeft, tvScreenBottom, tvScreenRight, tvScreenCenter, sonyScreen], {
     autoAlpha: 1, backgroundColor: '#fff', duration: 1
-  });
+  }, '>+=0.5');
   mainTl.call(() => {
     psIntroAudio.play();
   }, [], '<+=0.1');
@@ -66,6 +84,7 @@ testButton.addEventListener('click', () => {
     backgroundColor: '#000',
     duration: 0.1
   })
+
   mainTl.to(psScreen, { 
     autoAlpha: 1, backgroundColor: '#000', duration: 0.5 
   }, '<');
@@ -83,5 +102,5 @@ testButton.addEventListener('click', () => {
   });
   mainTl.call(() => {
     psIntroAudio.pause();
-  }, [], '>+=7')
+  }, [], '>+=7');
 });
