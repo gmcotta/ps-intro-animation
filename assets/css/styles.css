@@ -649,8 +649,38 @@ footer a {
   text-decoration: none;
 }
 
-.test-button {
+.overlay {
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 20;
+  gap: 2rem;
+  display: none;
+  opacity: 1;
+}
+
+.overlay button,
+.overlay a {
+  color: var(--color-white-pure);
+  background-color: var(--color-black-pure);
+  font-size: 10rem;
+  border: 0.8rem solid var(--color-white-pure);
+  border-radius: 0.8rem;
+  padding: 1rem 3rem;
+  font-family: "VT323", monospace;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.overlay button:hover,
+.overlay a:hover {
+  cursor: pointer;
+  background-color: var(--color-ps-dark);
 }
