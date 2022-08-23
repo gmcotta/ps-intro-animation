@@ -26,6 +26,9 @@ const psScreenTextSCEA = document.querySelector('.ps-screen__scea-text');
 
 const psIntroAudio = document.querySelector('#playstation-intro-audio');
 
+const overlay = document.querySelector(".overlay");
+const playAgainButton = document.querySelector("#play-again");
+
 // main timeline
 const mainTl = gsap.timeline({
   onUpdate: () =>
@@ -102,5 +105,14 @@ psLidOpen.addEventListener('click', () => {
   });
   mainTl.call(() => {
     psIntroAudio.pause();
+    gsap.set(overlay, { display: "flex", autoAlpha: 1, duration: 0 });
   }, [], '>+=7');
 });
+
+const restartAnimation = () => {
+  gsap.set(overlay, { display: "none", autoAlpha: 0, duration: 0 });
+  psIntroAudio.currentTime = 0;
+  mainTl.play(0);
+};
+
+playAgainButton.addEventListener("click", restartAnimation);
