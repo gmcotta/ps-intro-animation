@@ -21,7 +21,7 @@ html {
 
 @media (max-width: 1024px) {
   html {
-    font-size: calc((100vw / 1024) * 9);
+    font-size: calc((100vw / 1024) * 8);
   }
 }
 
@@ -93,8 +93,8 @@ main {
 }
 
 .tv {
-  width: 80rem;
-  height: 63rem;
+  width: 60rem;
+  height: 47rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -102,7 +102,7 @@ main {
 
 .tv__body {
   width: 100%;
-  height: 60rem;
+  height: 43rem;
   background-color: var(--color-tv-primary);
   border-radius: 1rem;
   padding: 2rem;
@@ -114,11 +114,11 @@ main {
 
 .tv__logo {
   position: absolute;
-  bottom: 0.8rem;
+  bottom: 0.6rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 10rem;
-  height: 3.2rem;
+  width: 8rem;
+  height: 2.2rem;
   background-color: var(--color-tv-secondary);
 }
 
@@ -200,7 +200,7 @@ main {
 
 .tv__stand {
   width: 95%;
-  height: 7rem;
+  height: 4rem;
   background-color: var(--color-tv-secondary);
   border-radius: 0 0 1rem 1rem;
 }
@@ -291,7 +291,7 @@ main {
 
 .sony-screen__title {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 4.8rem;
+  font-size: 3.6rem;
   font-weight: 900;
   text-transform: uppercase;
   text-align: center;
@@ -305,8 +305,8 @@ main {
   background: var(--color-intro-sony-diamond-gradient);
   transform: rotate(45deg);
   position: relative;
-  margin-top: 4rem;
-  margin-bottom: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 4rem;
   opacity: 0;
 }
 
@@ -333,7 +333,7 @@ main {
 
 .sony-screen__text-1 {
   font-family: 'Arial', sans-serif;
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
@@ -343,7 +343,7 @@ main {
 
 .sony-screen__text-2 {
   font-family: 'Arial', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   font-weight: 500;
   text-transform: uppercase;
   text-align: center;
@@ -352,11 +352,11 @@ main {
 
 .sony-screen__text-3 {
   position: absolute;
-  bottom: 0.2rem;
+  bottom: 0;
   right: 0;
   transform: translateX(120%);
   font-family: 'Arial', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
@@ -378,20 +378,20 @@ main {
 }
 
 .ps-screen__ps-logo-image {
-  width: 20rem;
-  margin-bottom: 0.8rem;
+  width: 14rem;
+  margin-bottom: 0.6rem;
   opacity: 0;
 }
 
 .ps-screen__ps-logo-text {
-  width: 20rem;
-  margin-bottom: 0.8rem;
+  width: 14rem;
+  margin-bottom: 0.6rem;
   opacity: 0;
 }
 
 .ps-screen__text-container {
   font-family: 'Helvetica', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: var(--color-intro-ps-text);
   text-align: center;
   margin-bottom: 0.8rem;
@@ -401,7 +401,7 @@ main {
 
 .ps-screen__scea-text {
   font-family: 'Helvetica', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   color: var(--color-intro-ps-text);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -414,11 +414,43 @@ main {
 
 .right-side {
   width: 40rem;
-  height: 45rem;
+  height: 36rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+.playstation-lid {
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-ps-primary);
+  border: 0.4rem solid var(--color-ps-secondary);
+  transform-origin: bottom;
+  transform: rotateX(30deg) translateY(6rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.playstation-lid__gear {
+  position: absolute;
+  bottom: 2rem;
+  right: 3rem;
+  width: 0.8rem;
+  height: 4rem;
+  background-color: var(--color-ps-secondary);
+}
+
+.playstation-lid__cd-support {
+  height: 20%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: var(--color-ps-primary);
+  border: 0.4rem solid var(--color-ps-secondary);
 }
 
 .playstation {
@@ -435,6 +467,7 @@ main {
   height: 1rem;
   background-color: var(--color-ps-primary);
   border-bottom: 0.1rem solid var(--color-ps-secondary);
+  opacity: 0;
 }
 
 .playstation__body {
@@ -444,6 +477,7 @@ main {
   border-radius: 0 0 0.4rem 0.4rem;
   display: flex;
   justify-content: center;
+  border-top: 0.1rem solid var(--color-ps-secondary);
 }
 
 .playstation-body__controller-area {
@@ -452,7 +486,6 @@ main {
   background-color: var(--color-ps-primary);
   display: flex;
   justify-content: space-between;
-  /* padding-top: 1rem; */
 }
 
 .playstation-controller-area__wrapper {

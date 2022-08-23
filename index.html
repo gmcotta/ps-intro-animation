@@ -13,7 +13,7 @@
   <header class="header">
     <h1>PlayStation intro animation</h1>
     <h2>Made by: Gustavo Matias</h2>
-    <p>Click on the disk to start animation</p>
+    <p>Click on the PlayStation lid to start animation</p>
     <div id="progress-bar"></div>
   </header>
   <main>
@@ -92,7 +92,10 @@
       </div>
     </section>
     <section class="right-side">
-      <section class="disk"></section>
+      <section class="playstation-lid" role="button">
+        <div class="playstation-lid__gear"></div>
+        <div class="playstation-lid__cd-support"></div>
+      </section>
       <section class="playstation">
         <div class="playstation__lid"></div>
         <div class="playstation__body">
@@ -161,7 +164,6 @@
     </section>
   </main>
   <section class="overlay"></section>
-  <button class="test-button">Start animation</button>
   <footer>
     <div>
       <a href="https://github.com/gmcotta" target="_blank" rel="noopener noreferrer">
